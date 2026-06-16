@@ -80,7 +80,7 @@ export function Footer() {
               variant="outline"
               size="sm"
               asChild
-              className="mb-6 border-primary/30 text-primary hover:bg-primary/5"
+              className="mb-6 border-primary/30 text-primary hover:bg-primary hover:text-white"
             >
               <Link href="/community">
                 <MessageCircle className="w-4 h-4 mr-2" />
