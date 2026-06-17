@@ -27,7 +27,7 @@ const industries = [
     highlights: [
       "GPS-denied navigation",
       "Indoor positioning",
-      "Real-time obstacle detection",
+      "Real-time spatial perception",
       "Centimeter-level accuracy",
     ],
   },
@@ -37,9 +37,9 @@ const industries = [
     description: "Enabling next-generation immersive experiences with sub-millimeter pose tracking for virtual and augmented reality applications.",
     highlights: [
       "6DOF head tracking",
-      "Hand pose estimation",
+      "Line-of-sight detection",
       "Object interaction",
-      "Low-latency rendering",
+      "Low-latency tracking",
     ],
   },
   {
@@ -49,7 +49,6 @@ const industries = [
     highlights: [
       "Robotic arm guidance",
       "Pick-and-place operations",
-      "Quality inspection",
       "Path planning support",
     ],
   },

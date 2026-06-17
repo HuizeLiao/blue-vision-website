@@ -116,7 +116,7 @@ export function Industries() {
         >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { value: "< 1ms", label: "Detection Latency" },
+              { value: "Ultra-low", label: "Detection Latency" },
               { value: "Sub-mm", label: "Precision" },
               { value: "6DOF", label: "Pose Tracking" },
               { value: "Real-time", label: "Processing" },

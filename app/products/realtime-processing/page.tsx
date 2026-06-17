@@ -29,8 +29,7 @@ export default function RealtimeProcessingPage() {
               Real-time Processing Engine
             </h1>
             <p className="text-lg text-muted-foreground mb-8">
-              Ultra-low latency processing engine designed for demanding real-time applications, 
-              delivering sub-millisecond response times with consistent performance.
+              Low-latency processing engine optimized for real-time computer vision applications, delivering consistent performance in demanding operational scenarios.
             </p>
           </motion.div>
 
@@ -43,12 +42,10 @@ export default function RealtimeProcessingPage() {
             <h2 className="text-2xl font-semibold text-foreground mb-6">Key Features</h2>
             <div className="grid md:grid-cols-2 gap-4">
               {[
-                "Sub-millisecond processing latency",
-                "120+ FPS sustained performance",
-                "Edge computing optimization",
-                "GPU acceleration support",
-                "Multi-threaded architecture",
-                "Memory-efficient algorithms",
+                "Ultra-low latency processing",
+                "Real-time performance",
+                "Edge and cloud deployment support",
+                "Optimized for DNN inference",
               ].map((feature, idx) => (
                 <div key={idx} className="flex items-start gap-3">
                   <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -66,23 +63,19 @@ export default function RealtimeProcessingPage() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="bg-card border border-border rounded-xl p-8 mb-8"
           >
-            <h2 className="text-2xl font-semibold text-foreground mb-4">Technical Specifications</h2>
+            <h2 className="text-2xl font-semibold text-foreground mb-4">Performance Highlights</h2>
             <div className="space-y-4">
               <div className="flex justify-between py-2 border-b border-border">
-                <span className="text-muted-foreground">Processing Latency</span>
-                <span className="text-foreground font-medium">&lt; 1ms</span>
+                <span className="text-muted-foreground">Processing</span>
+                <span className="text-foreground font-medium">Real-time, low latency</span>
               </div>
               <div className="flex justify-between py-2 border-b border-border">
-                <span className="text-muted-foreground">Max Frame Rate</span>
-                <span className="text-foreground font-medium">240 FPS</span>
+                <span className="text-muted-foreground">Deployment</span>
+                <span className="text-foreground font-medium">Edge computing ready / Cloud support</span>
               </div>
               <div className="flex justify-between py-2 border-b border-border">
-                <span className="text-muted-foreground">GPU Support</span>
-                <span className="text-foreground font-medium">CUDA / OpenCL</span>
-              </div>
-              <div className="flex justify-between py-2">
-                <span className="text-muted-foreground">Memory Usage</span>
-                <span className="text-foreground font-medium">&lt; 512MB</span>
+                <span className="text-muted-foreground">Compatibility</span>
+                <span className="text-foreground font-medium">Optimized for vision-based AI models</span>
               </div>
             </div>
           </motion.div>

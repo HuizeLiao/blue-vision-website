@@ -29,7 +29,7 @@ export default function APDetectionPage() {
               Aiming Point Detection
             </h1>
             <p className="text-lg text-muted-foreground mb-8">
-              Advanced computer vision algorithms that achieve sub-millimeter accuracy for precise 
+              Advanced computer vision algorithms that achieve inch-level accuracy for precise 
               aiming point identification, enabling real-time feedback in training scenarios.
             </p>
           </motion.div>
@@ -43,12 +43,10 @@ export default function APDetectionPage() {
             <h2 className="text-2xl font-semibold text-foreground mb-6">Key Features</h2>
             <div className="grid md:grid-cols-2 gap-4">
               {[
-                "Sub-millimeter detection precision",
-                "Real-time processing at 120+ FPS",
+                "Inch-level detection precision",
+                "Real-time processing",
                 "Multi-environment adaptability",
-                "Automatic calibration system",
-                "Shot grouping analysis",
-                "Historical accuracy tracking",
+                "Simple calibration system",
               ].map((feature, idx) => (
                 <div key={idx} className="flex items-start gap-3">
                   <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -66,23 +64,23 @@ export default function APDetectionPage() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="bg-card border border-border rounded-xl p-8 mb-8"
           >
-            <h2 className="text-2xl font-semibold text-foreground mb-4">Technical Specifications</h2>
+            <h2 className="text-2xl font-semibold text-foreground mb-4">Performance Highlights</h2>
             <div className="space-y-4">
               <div className="flex justify-between py-2 border-b border-border">
-                <span className="text-muted-foreground">Detection Accuracy</span>
-                <span className="text-foreground font-medium">0.1mm @ 10m</span>
+                <span className="text-muted-foreground">Accuracy</span>
+                <span className="text-foreground font-medium">Inch-level precision</span>
               </div>
               <div className="flex justify-between py-2 border-b border-border">
-                <span className="text-muted-foreground">Processing Speed</span>
-                <span className="text-foreground font-medium">120+ FPS</span>
+                <span className="text-muted-foreground">Processing</span>
+                <span className="text-foreground font-medium">Real-time, low latency</span>
               </div>
               <div className="flex justify-between py-2 border-b border-border">
-                <span className="text-muted-foreground">Detection Latency</span>
-                <span className="text-foreground font-medium">&lt; 0.5ms</span>
+                <span className="text-muted-foreground">Sensor</span>
+                <span className="text-foreground font-medium">Pure vision (camera only)</span>
               </div>
               <div className="flex justify-between py-2">
-                <span className="text-muted-foreground">Supported Targets</span>
-                <span className="text-foreground font-medium">Multiple target types</span>
+                <span className="text-muted-foreground">Scalability</span>
+                <span className="text-foreground font-medium">Supports multiple aiming devices</span>
               </div>
             </div>
           </motion.div>

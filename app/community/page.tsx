@@ -13,6 +13,7 @@ interface Comment {
   content: string
   timestamp: string
   likes: number
+  likedByUser?: boolean;
   replies: Comment[]
 }
 
@@ -82,7 +83,12 @@ export default function CommunityPage() {
     setReplyAuthor("")
   }
 
+  const [likedIds, setLikedIds] = useState<Set<string>>(new Set());
+
   const handleLike = (commentId: string, isReply: boolean = false, parentId?: string) => {
+    const key = isReply ? `reply-${parentId}-${commentId}` : `comment-${commentId}`;
+    const alreadyLiked = likedIds.has(key);
+
     if (isReply && parentId) {
       setComments(
         comments.map((comment) =>
@@ -91,23 +97,30 @@ export default function CommunityPage() {
                 ...comment,
                 replies: comment.replies.map((reply) =>
                   reply.id === commentId
-                    ? { ...reply, likes: reply.likes + 1 }
+                    ? { ...reply, likes: reply.likes + (alreadyLiked ? -1 : 1) }
                     : reply
                 ),
               }
             : comment
         )
-      )
+      );
     } else {
       setComments(
         comments.map((comment) =>
           comment.id === commentId
-            ? { ...comment, likes: comment.likes + 1 }
+            ? { ...comment, likes: comment.likes + (alreadyLiked ? -1 : 1) }
             : comment
         )
-      )
+      );
     }
-  }
+    const newLikedIds = new Set(likedIds);
+    if (alreadyLiked) {
+      newLikedIds.delete(key);
+    } else {
+      newLikedIds.add(key);
+    }
+    setLikedIds(newLikedIds);
+  };
 
   const formatTime = (timestamp: string) => {
     const date = new Date(timestamp)
@@ -172,7 +185,6 @@ export default function CommunityPage() {
                   type="text"
                   value={authorName}
                   onChange={(e) => setAuthorName(e.target.value)}
-                  placeholder="Anonymous"
                   className="w-full px-4 py-2 bg-muted/50 border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary"
                 />
               </div>

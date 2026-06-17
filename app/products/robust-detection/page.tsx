@@ -29,8 +29,7 @@ export default function RobustDetectionPage() {
               Robust Detection Suite
             </h1>
             <p className="text-lg text-muted-foreground mb-8">
-              Comprehensive detection solution designed to perform reliably in challenging 
-              environmental conditions including low light, occlusion, and motion blur.
+              Comprehensive detection solution designed to perform reliably in challenging environmental conditions including low illumination, occlusion, and motion blur.
             </p>
           </motion.div>
 
@@ -43,12 +42,11 @@ export default function RobustDetectionPage() {
             <h2 className="text-2xl font-semibold text-foreground mb-6">Key Features</h2>
             <div className="grid md:grid-cols-2 gap-4">
               {[
-                "Low light detection down to 1 lux",
-                "Advanced occlusion handling",
-                "Motion blur compensation",
-                "Variable distance support",
-                "Automatic exposure adjustment",
-                "Noise reduction algorithms",
+                "Low-light adaptability",
+                "Occlusion robust",
+                "Motion blur tolerance",
+                "Noise-resistant algorithms",
+                "Multi-environment support",
               ].map((feature, idx) => (
                 <div key={idx} className="flex items-start gap-3">
                   <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -66,23 +64,19 @@ export default function RobustDetectionPage() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="bg-card border border-border rounded-xl p-8 mb-8"
           >
-            <h2 className="text-2xl font-semibold text-foreground mb-4">Technical Specifications</h2>
+            <h2 className="text-2xl font-semibold text-foreground mb-4">Performance Highlights</h2>
             <div className="space-y-4">
               <div className="flex justify-between py-2 border-b border-border">
-                <span className="text-muted-foreground">Minimum Light</span>
-                <span className="text-foreground font-medium">1 lux</span>
+                <span className="text-muted-foreground">Adaptability</span>
+                <span className="text-foreground font-medium">Dynamic and challenging environments</span>
               </div>
               <div className="flex justify-between py-2 border-b border-border">
-                <span className="text-muted-foreground">Occlusion Tolerance</span>
-                <span className="text-foreground font-medium">Up to 50%</span>
+                <span className="text-muted-foreground">Robustness</span>
+                <span className="text-foreground font-medium">Image noise, nonuniform distortions, occlusion</span>
               </div>
               <div className="flex justify-between py-2 border-b border-border">
-                <span className="text-muted-foreground">Motion Blur Handling</span>
-                <span className="text-foreground font-medium">Up to 30 pixels</span>
-              </div>
-              <div className="flex justify-between py-2">
-                <span className="text-muted-foreground">Detection Range</span>
-                <span className="text-foreground font-medium">0.3m - 100m</span>
+                <span className="text-muted-foreground">Range</span>
+                <span className="text-foreground font-medium">Optimized for small-scale spaces</span>
               </div>
             </div>
           </motion.div>

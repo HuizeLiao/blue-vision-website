@@ -49,7 +49,16 @@ export function Hero() {
           >
             Revolutionary pure-vision AI solutions for high-precision Aiming Point detection 
             and 6DOF pose estimation. Empowering the next generation of autonomous systems, 
-            robotics, and immersive experiences.
+            robotics, and immersive experiences. 
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="mt-4 text-base sm:text-lg text-muted-foreground/80 max-w-3xl mx-auto text-pretty"
+          >
+            No markers. No laser. No sensor fusion. Just pure vision.
           </motion.p>
 
 
@@ -62,8 +71,8 @@ export function Hero() {
             className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
           >
             {[
-              { value: "< 1ms", label: "Latency" },
-              { value: "99.9%", label: "Accuracy" },
+              { value: "Ultra-low", label: "Latency" },
+              { value: "High", label: "Accuracy" },
               { value: "6DOF", label: "Pose Detection" },
               { value: "Real-time", label: "Processing" },
             ].map((stat, index) => (
@@ -77,7 +86,7 @@ export function Hero() {
           </motion.div>
         </div>
 
-        {/* 3D Visual Representation */}
+          {/* 3D Visual Representation */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -92,55 +101,45 @@ export function Hero() {
               
               {/* Detection Visualization */}
               <div className="relative z-10 aspect-video bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-xl border border-slate-700 overflow-hidden">
-                {/* Simulated Camera View */}
+                
+                {/* 图片 + 圆角边框 + 四角脉冲点 */}
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="relative">
-                    {/* Target Object */}
-                    <div className="w-32 h-32 sm:w-48 sm:h-48 border-2 border-primary rounded-lg animate-pulse-glow flex items-center justify-center">
-                      <div className="w-16 h-16 sm:w-24 sm:h-24 border border-accent rounded-md rotate-12" />
-                    </div>
+                  <div className="relative border-2 border-primary/60 rounded-xl shadow-[0_0_30px_rgba(0,180,216,0.15)] p-2 bg-slate-800/50 backdrop-blur-sm">
                     
-                    {/* Detection Points */}
+                    {/* 四角脉冲点 */}
                     <div className="absolute -top-2 -left-2 w-4 h-4 bg-primary rounded-full animate-ping" />
                     <div className="absolute -top-2 -right-2 w-4 h-4 bg-primary rounded-full animate-ping delay-100" />
                     <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-primary rounded-full animate-ping delay-200" />
                     <div className="absolute -bottom-2 -right-2 w-4 h-4 bg-primary rounded-full animate-ping delay-300" />
                     
-                    {/* Center Crosshair */}
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                      <div className="w-8 h-0.5 bg-accent" />
-                      <div className="w-0.5 h-8 bg-accent absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
-                    </div>
+                    {/* image */}
+                    <img 
+                      src="/images/CalculateCamera6DOF.drawio.png"   // 改成你的图片路径
+                      alt="AP/6DOF Detection Principle"
+                      className="w-auto h-auto max-w-[460px] max-h-[300px] object-contain rounded-lg"
+                    />
                   </div>
                 </div>
 
-                {/* HUD Elements */}
+                {/* HUD Elements - 左侧 */}
                 <div className="absolute top-4 left-4 font-mono text-xs text-primary">
                   <div>TRACKING: ACTIVE</div>
                   <div>FPS: 120</div>
-                  <div>PRECISION: 0.001mm</div>
+                  <div>PRECISION: Inch-level</div>
                 </div>
+                
+                {/* HUD Elements - right */}
                 <div className="absolute top-4 right-4 font-mono text-xs text-accent text-right">
                   <div>6DOF ENABLED</div>
                   <div>X: 0.00 Y: 0.00 Z: 0.00</div>
                   <div>Roll | Pitch | Yaw</div>
                 </div>
+                
+                {/* HUD Elements - botton */}
                 <div className="absolute bottom-4 left-4 right-4 flex justify-between font-mono text-xs text-slate-400">
                   <span>Blue Vision Systems AI Engine v3.0</span>
-                  <span>LATENCY: 0.8ms</span>
+                  <span>LATENCY: Real-time</span>
                 </div>
-              </div>
-            </div>
-
-            {/* Floating Tech Labels */}
-            <div className="absolute -left-4 top-1/4 hidden lg:block">
-              <div className="bg-card border border-border rounded-lg px-3 py-2 text-xs font-mono text-primary animate-float shadow-lg">
-                Neural Network
-              </div>
-            </div>
-            <div className="absolute -right-4 top-1/3 hidden lg:block">
-              <div className="bg-card border border-border rounded-lg px-3 py-2 text-xs font-mono text-accent animate-float delay-500 shadow-lg">
-                Deep Learning
               </div>
             </div>
           </div>

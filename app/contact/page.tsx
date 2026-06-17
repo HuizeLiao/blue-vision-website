@@ -35,16 +35,40 @@ export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500))
-    
-    setIsSubmitting(false)
-    setIsSubmitted(true)
-  }
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      firstName: formData.get('firstName'),
+      lastName: formData.get('lastName'),
+      email: formData.get('email'),
+      company: formData.get('company') || '',
+      subject: formData.get('subject'),
+      message: formData.get('message'),
+    };
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+
+      if (!res.ok) {
+        const errorData = await res.json();
+        throw new Error(errorData.error || 'Failed to send');
+      }
+
+      setIsSubmitted(true);
+    } catch (error) {
+      console.error('Submit error:', error);
+      alert('Something went wrong. Please try again later.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <main className="min-h-screen bg-background">
@@ -117,16 +141,14 @@ export default function ContactPage() {
                       <div className="space-y-2">
                         <Label htmlFor="firstName">First Name</Label>
                         <Input
-                          id="firstName"
-                          placeholder="John"
+                          id="firstName" name="firstName"
                           required
                         />
                       </div>
                       <div className="space-y-2">
                         <Label htmlFor="lastName">Last Name</Label>
                         <Input
-                          id="lastName"
-                          placeholder="Doe"
+                          id="lastName" name="lastName"
                           required
                         />
                       </div>
@@ -135,9 +157,8 @@ export default function ContactPage() {
                     <div className="space-y-2">
                       <Label htmlFor="email">Email</Label>
                       <Input
-                        id="email"
+                        id="email" name="email"
                         type="email"
-                        placeholder="john@example.com"
                         required
                       />
                     </div>
@@ -145,7 +166,7 @@ export default function ContactPage() {
                     <div className="space-y-2">
                       <Label htmlFor="company">Company (Optional)</Label>
                       <Input
-                        id="company"
+                        id="company" name="company"
                         placeholder="Your company name"
                       />
                     </div>
@@ -153,7 +174,7 @@ export default function ContactPage() {
                     <div className="space-y-2">
                       <Label htmlFor="subject">Subject</Label>
                       <Input
-                        id="subject"
+                        id="subject" name="subject"
                         placeholder="How can we help?"
                         required
                       />
@@ -162,7 +183,7 @@ export default function ContactPage() {
                     <div className="space-y-2">
                       <Label htmlFor="message">Message</Label>
                       <Textarea
-                        id="message"
+                        id="message" name="message"
                         placeholder="Tell us more about your project or inquiry..."
                         rows={5}
                         required

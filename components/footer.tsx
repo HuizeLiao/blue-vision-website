@@ -28,7 +28,7 @@ const footerLinks = {
     title: "Developer",
     links: [
       { label: "Documentation", href: "/developer" },
-      { label: "API Reference", href: "/developer" },
+      { label: "SDK & API Reference", href: "/developer" },
       { label: "Sample Projects", href: "/developer" },
       { label: "Quick Start", href: "/developer" },
     ],

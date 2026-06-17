@@ -46,9 +46,9 @@ export default function LaserLessTrackingPage() {
                 "No laser safety certification required",
                 "Zero eye-safety risks for trainees",
                 "Significantly lower maintenance costs",
-                "Military-grade reliability and durability",
-                "Works in all lighting conditions",
-                "Instant setup with no calibration needed",
+                "Defense-grade reliability",
+                "Adapts to challenging environments",
+                "Simple configuration and calibration process",
               ].map((feature, idx) => (
                 <div key={idx} className="flex items-start gap-3">
                   <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -69,20 +69,24 @@ export default function LaserLessTrackingPage() {
             <h2 className="text-2xl font-semibold text-foreground mb-4">Technical Specifications</h2>
             <div className="space-y-4">
               <div className="flex justify-between py-2 border-b border-border">
-                <span className="text-muted-foreground">Tracking Accuracy</span>
-                <span className="text-foreground font-medium">Sub-millimeter</span>
+                <span className="text-muted-foreground">Detection Capability</span>
+                <span className="text-foreground font-medium">6DOF (Position X, Y, Z + Orientation Roll, Pitch, Yaw)</span>
               </div>
               <div className="flex justify-between py-2 border-b border-border">
-                <span className="text-muted-foreground">Frame Rate</span>
-                <span className="text-foreground font-medium">Up to 120 FPS</span>
+                <span className="text-muted-foreground">Sensor</span>
+                <span className="text-foreground font-medium">Pure vision (camera only) — no laser, no markers, no sensor fusion</span>
               </div>
               <div className="flex justify-between py-2 border-b border-border">
-                <span className="text-muted-foreground">Latency</span>
-                <span className="text-foreground font-medium">&lt; 1ms</span>
+                <span className="text-muted-foreground">Processing</span>
+                <span className="text-foreground font-medium">Real-time, low latency</span>
               </div>
-              <div className="flex justify-between py-2">
-                <span className="text-muted-foreground">Operating Range</span>
-                <span className="text-foreground font-medium">0.5m - 50m</span>
+              <div className="flex justify-between py-2 border-b border-border">
+                <span className="text-muted-foreground">Accuracy</span>
+                <span className="text-foreground font-medium">High-precision, inch-level tracking</span>
+              </div>
+              <div className="flex justify-between py-2 ">
+                <span className="text-muted-foreground">Scalability</span>
+                <span className="text-foreground font-medium">Linear complexity growth for multiple devices</span>
               </div>
             </div>
           </motion.div>

@@ -45,10 +45,9 @@ export default function SixDOFEstimationPage() {
               {[
                 "Full 6DOF spatial tracking",
                 "High-precision position data",
-                "Accurate orientation sensing",
+                "Pure vision-based detection",
                 "Real-time pose updates",
-                "Quaternion and Euler output",
-                "Sensor fusion support",
+                "Independent tracking per device",
               ].map((feature, idx) => (
                 <div key={idx} className="flex items-start gap-3">
                   <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -66,23 +65,23 @@ export default function SixDOFEstimationPage() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="bg-card border border-border rounded-xl p-8 mb-8"
           >
-            <h2 className="text-2xl font-semibold text-foreground mb-4">Technical Specifications</h2>
+            <h2 className="text-2xl font-semibold text-foreground mb-4">Performance Highlights</h2>
             <div className="space-y-4">
               <div className="flex justify-between py-2 border-b border-border">
-                <span className="text-muted-foreground">Position Accuracy</span>
-                <span className="text-foreground font-medium">1mm</span>
+                <span className="text-muted-foreground">Tracking</span>
+                <span className="text-foreground font-medium">6DOF (Position + Attitude)</span>
               </div>
               <div className="flex justify-between py-2 border-b border-border">
-                <span className="text-muted-foreground">Rotation Accuracy</span>
-                <span className="text-foreground font-medium">0.1 degree</span>
+                <span className="text-muted-foreground">Output</span>
+                <span className="text-foreground font-medium">X, Y, Z, Roll, Pitch, Yaw</span>
               </div>
               <div className="flex justify-between py-2 border-b border-border">
-                <span className="text-muted-foreground">Update Rate</span>
-                <span className="text-foreground font-medium">120 Hz</span>
+                <span className="text-muted-foreground">Processing</span>
+                <span className="text-foreground font-medium">Real-time, low latency</span>
               </div>
               <div className="flex justify-between py-2">
-                <span className="text-muted-foreground">Tracking Volume</span>
-                <span className="text-foreground font-medium">10m x 10m x 5m</span>
+                <span className="text-muted-foreground">Scalability</span>
+                <span className="text-foreground font-medium">1Linear complexity for multiple devices</span>
               </div>
             </div>
           </motion.div>

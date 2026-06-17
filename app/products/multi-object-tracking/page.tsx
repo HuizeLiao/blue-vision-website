@@ -29,8 +29,7 @@ export default function MultiObjectTrackingPage() {
               Multi-Object Tracking
             </h1>
             <p className="text-lg text-muted-foreground mb-8">
-              Advanced tracking system capable of simultaneously monitoring multiple objects 
-              with unique identification and intelligent trajectory prediction.
+              Simultaneous tracking of multiple aiming devices with independent spatial awareness. System complexity and cost scale linearly as more devices are added.
             </p>
           </motion.div>
 
@@ -43,12 +42,11 @@ export default function MultiObjectTrackingPage() {
             <h2 className="text-2xl font-semibold text-foreground mb-6">Key Features</h2>
             <div className="grid md:grid-cols-2 gap-4">
               {[
-                "Track 50+ objects simultaneously",
-                "Unique object identification",
-                "Trajectory prediction algorithms",
-                "Occlusion handling",
-                "Re-identification after loss",
-                "Velocity and acceleration data",
+                "Multiple device support",
+                "Independent tracking per device",
+                "Linear scalability",
+                "Robust against occlusion",
+                "Unique device identification",
               ].map((feature, idx) => (
                 <div key={idx} className="flex items-start gap-3">
                   <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -66,23 +64,19 @@ export default function MultiObjectTrackingPage() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="bg-card border border-border rounded-xl p-8 mb-8"
           >
-            <h2 className="text-2xl font-semibold text-foreground mb-4">Technical Specifications</h2>
+            <h2 className="text-2xl font-semibold text-foreground mb-4">Performance Highlights</h2>
             <div className="space-y-4">
               <div className="flex justify-between py-2 border-b border-border">
-                <span className="text-muted-foreground">Max Tracked Objects</span>
-                <span className="text-foreground font-medium">50+</span>
+                <span className="text-muted-foreground">Architecture</span>
+                <span className="text-foreground font-medium">Decentralized, device-independent processing</span>
               </div>
               <div className="flex justify-between py-2 border-b border-border">
-                <span className="text-muted-foreground">Re-ID Accuracy</span>
-                <span className="text-foreground font-medium">99.5%</span>
-              </div>
-              <div className="flex justify-between py-2 border-b border-border">
-                <span className="text-muted-foreground">Prediction Window</span>
-                <span className="text-foreground font-medium">Up to 2 seconds</span>
+                <span className="text-muted-foreground">Scalability</span>
+                <span className="text-foreground font-medium">Linear cost increase per additional device</span>
               </div>
               <div className="flex justify-between py-2">
-                <span className="text-muted-foreground">Processing Overhead</span>
-                <span className="text-foreground font-medium">&lt; 5% per object</span>
+                <span className="text-muted-foreground">Output</span>
+                <span className="text-foreground font-medium">Position (X, Y, Z) and orientation (Roll, Pitch, Yaw) for each device</span>
               </div>
             </div>
           </motion.div>

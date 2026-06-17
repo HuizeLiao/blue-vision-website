@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { BookOpen, Terminal, Cpu, FileCode, Rocket } from "lucide-react"
+import { BookOpen, Terminal, Cpu, FileCode, Rocket, Headset } from "lucide-react"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 
@@ -13,13 +13,13 @@ const resources = [
   },
   {
     icon: Terminal,
-    title: "API Reference",
-    description: "Complete REST API documentation with examples and code snippets for all endpoints.",
+    title: "SDK & API Reference",
+    description: "Complete software development kits and API documentation with code examples for on-device integration and system configuration.",
   },
   {
     icon: Cpu,
     title: "Hardware Integration",
-    description: "Guidelines for integrating with various camera systems and edge computing devices.",
+    description: "Guidelines for camera selection, edge computing deployment, and system architecture design to ensure optimal performance.",
   },
   {
     icon: FileCode,
@@ -30,6 +30,11 @@ const resources = [
     icon: Rocket,
     title: "Quick Start Guide",
     description: "Get up and running in minutes with our step-by-step integration tutorials.",
+  },
+  {
+    icon: Headset,
+    title: "Technical Service & Support",
+    description: "Customization and on-site technical service to adapt our solution to your specific operational environments.",
   },
 ]
 
@@ -81,7 +86,7 @@ export default function DeveloperPage() {
               Developer Resources
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Tools and documentation to help you build amazing applications.
+              Tools, documentation, and technical services to help you embed our AP/6DOF detection engine into your products.
             </p>
           </div>
 

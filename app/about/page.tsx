@@ -15,7 +15,7 @@ const values = [
   {
     icon: Target,
     title: "Precision",
-    description: "Delivering sub-millimeter accuracy for the most demanding applications.",
+    description: "Delivering inch-level accuracy for the most demanding applications.",
   },
   {
     icon: Users,
