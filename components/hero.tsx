@@ -31,7 +31,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight text-balance"
+            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-foreground leading-tight text-balance"
           >
             See Beyond.
             <br />
@@ -45,7 +45,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto text-pretty"
+            className="mt-6 text-[13px] sm:text-[15px] text-muted-foreground max-w-3xl mx-auto text-pretty"
           >
             Revolutionary pure-vision AI solutions for high-precision Aiming Point detection 
             and 6DOF pose estimation. Empowering the next generation of autonomous systems, 
@@ -77,7 +77,7 @@ export function Hero() {
               { value: "Real-time", label: "Processing" },
             ].map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-2xl sm:text-3xl font-bold text-primary">
+                <div className="text-xl sm:text-2xl font-bold text-primary">
                   {stat.value}
                 </div>
                 <div className="text-sm text-muted-foreground mt-1">{stat.label}</div>

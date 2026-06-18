@@ -84,7 +84,7 @@ export default function IndustriesPage() {
             <span className="text-sm font-medium text-primary uppercase tracking-wider">
               Industry Applications
             </span>
-            <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground text-balance">
+            <h1 className="mt-4 text-xl sm:text-2xl lg:text-3xl font-bold text-foreground text-balance">
               Transforming Industries
             </h1>
             <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
@@ -121,7 +121,7 @@ export default function IndustriesPage() {
                   )}
                 </div>
                 
-                <h3 className="text-2xl font-bold text-foreground mb-4">
+                <h3 className="text-xl font-bold text-foreground mb-4">
                   {industry.title}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-6">
@@ -145,7 +145,7 @@ export default function IndustriesPage() {
       {/* CTA Section */}
       <section className="py-16 bg-muted/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4">
+          <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4">
             Explore Industry Solutions
           </h2>
           <p className="text-muted-foreground mb-8">

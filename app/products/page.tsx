@@ -82,7 +82,7 @@ export default function ProductsPage() {
             <span className="text-sm font-medium text-primary uppercase tracking-wider">
               Our Products
             </span>
-            <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground text-balance">
+            <h1 className="mt-4 text-xl sm:text-2xl lg:text-3xl font-bold text-foreground text-balance">
               Visual AI Solutions
             </h1>
             <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">

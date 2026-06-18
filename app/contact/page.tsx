@@ -86,7 +86,7 @@ export default function ContactPage() {
             <span className="text-sm font-medium text-primary uppercase tracking-wider">
               Contact Us
             </span>
-            <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground text-balance">
+            <h1 className="mt-4 text-xl sm:text-2xl lg:text-3xl font-bold text-foreground text-balance">
               Get in Touch
             </h1>
             <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
@@ -108,7 +108,7 @@ export default function ContactPage() {
               transition={{ duration: 0.5 }}
             >
               <div className="bg-card border border-border rounded-2xl p-8">
-                <h2 className="text-2xl font-bold text-foreground mb-6">
+                <h2 className="text-xl font-bold text-foreground mb-6">
                   Send us a Message
                 </h2>
 
@@ -220,7 +220,7 @@ export default function ContactPage() {
               className="space-y-8"
             >
               <div>
-                <h2 className="text-2xl font-bold text-foreground mb-4">
+                <h2 className="text-xl font-bold text-foreground mb-4">
                   Contact Information
                 </h2>
                 <p className="text-muted-foreground">

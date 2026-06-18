@@ -25,7 +25,7 @@ export default function APDetectionPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">
+            <h1 className="text-xl sm:text-2xl font-bold text-foreground mb-6">
               Aiming Point Detection
             </h1>
             <p className="text-lg text-muted-foreground mb-8">
@@ -40,7 +40,7 @@ export default function APDetectionPage() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="bg-card border border-border rounded-xl p-8 mb-8"
           >
-            <h2 className="text-2xl font-semibold text-foreground mb-6">Key Features</h2>
+            <h2 className="text-xl font-semibold text-foreground mb-6">Key Features</h2>
             <div className="grid md:grid-cols-2 gap-4">
               {[
                 "Inch-level detection precision",
@@ -64,7 +64,7 @@ export default function APDetectionPage() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="bg-card border border-border rounded-xl p-8 mb-8"
           >
-            <h2 className="text-2xl font-semibold text-foreground mb-4">Performance Highlights</h2>
+            <h2 className="text-xl font-semibold text-foreground mb-4">Performance Highlights</h2>
             <div className="space-y-4">
               <div className="flex justify-between py-2 border-b border-border">
                 <span className="text-muted-foreground">Accuracy</span>
