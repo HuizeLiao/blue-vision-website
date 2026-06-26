@@ -114,7 +114,7 @@ export function Hero() {
                     
                     {/* image */}
                     <img 
-                      src="/images/CalculateCamera6DOF.drawio.png"   // 改成你的图片路径
+                      src="/images/CalculateCamera6DOF.drawio.png"   // 封面图片路径
                       alt="AP/6DOF Detection Principle"
                       className="w-auto h-auto max-w-[460px] max-h-[300px] object-contain rounded-lg"
                     />

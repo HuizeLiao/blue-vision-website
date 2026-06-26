@@ -3,7 +3,8 @@ import { Inter, JetBrains_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 import Script from "next/script";
-import Clarity from '@microsoft/clarity';
+import Clarity from "@microsoft/clarity";
+import { ClarityProvider } from "@/components/clarity-provider"
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -64,6 +65,7 @@ export default function RootLayout({
       {children}
 
       {process.env.NODE_ENV === "production" && <Analytics />}
+      <ClarityProvider />
 
       {process.env.NODE_ENV === "production" && process.env.NEXT_PUBLIC_GA_ID && (
         <>
