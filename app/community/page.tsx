@@ -153,10 +153,10 @@ export default function CommunityPage() {
               <MessageCircle className="w-4 h-4" />
               Community Discussion
             </div>
-            <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+            <h1 className="text-xl md:text-2xl font-bold text-foreground mb-6">
               Join the Conversation
             </h1>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Share your thoughts, feedback, and ideas with the Blue Vision community. 
               No login required - everyone is welcome to participate.
             </p>
