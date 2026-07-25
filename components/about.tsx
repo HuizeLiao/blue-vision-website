@@ -34,7 +34,7 @@ const founders = [
     description: "Decades of industrial experience in simulated firearm training systems and defense technology.",
   },
   {
-    name: "Dr. Ming Yang",
+    name: "Dr. Lucas Yang",
     role: "Co-founder",
     description: "University Professor specializing in image processing and computer vision research.",
   },
