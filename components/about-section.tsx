@@ -44,7 +44,7 @@ const team = [
     expertise: "AP/6DOF检测技术、系统架构设计、项目管理",
   },
   {
-    name: "Ming Yang 博士",
+    name: "Lucas Yang 博士",
     role: "联合创始人 & 首席科学家",
     background: "计算机科学博士",
     experience: "肯尼索州立大学终身教授，发表70余篇同行评审论文",
