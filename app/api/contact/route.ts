@@ -2,16 +2,19 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-// 检查环境变量是否存在
-const apiKey = process.env.RESEND_API_KEY;
-if (!apiKey) {
-  console.error('Missing RESEND_API_KEY environment variable');
-}
-
-const resend = new Resend(apiKey); 
-
 export async function POST(request: NextRequest) {
   try {
+    // Read the secret at request time so builds do not require production secrets.
+    const apiKey = process.env.RESEND_API_KEY;
+    if (!apiKey) {
+      console.error('RESEND_API_KEY is not set');
+      return NextResponse.json(
+        { error: 'Server configuration error' },
+        { status: 500 }
+      );
+    }
+
+    const resend = new Resend(apiKey);
     const body = await request.json();
     const { firstName, lastName, email, company, subject, message } = body;
 
@@ -20,15 +23,6 @@ export async function POST(request: NextRequest) {
       return NextResponse.json(
         { error: 'Missing required fields' },
         { status: 400 }
-      );
-    }
-
-    // 再次确保 API Key 存在
-    if (!apiKey) {
-      console.error('RESEND_API_KEY is not set');
-      return NextResponse.json(
-        { error: 'Server configuration error' },
-        { status: 500 }
       );
     }
 
