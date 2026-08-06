@@ -1,7 +1,7 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "main": ".open-next/worker.js",
-  "name": "blue-vision-sys",
+  "name": "blue-vision-website",
   "compatibility_date": "2026-08-03",
   "compatibility_flags": [
     "nodejs_compat"
@@ -13,7 +13,7 @@
   "services": [
     {
       "binding": "WORKER_SELF_REFERENCE",
-      "service": "blue-vision-sys"
+      "service": "blue-vision-website"
     }
   ],
   "images": {
